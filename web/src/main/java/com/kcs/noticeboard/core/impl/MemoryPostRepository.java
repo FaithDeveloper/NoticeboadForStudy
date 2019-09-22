@@ -9,6 +9,8 @@ import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
+
+// interface PostRepository 을 구현한 클래스.
 @Repository
 public class MemoryPostRepository implements PostRepository {
     private Map<Integer, Post> data = new ConcurrentHashMap<>();

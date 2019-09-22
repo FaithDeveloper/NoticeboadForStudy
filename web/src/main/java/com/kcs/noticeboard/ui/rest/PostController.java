@@ -20,11 +20,15 @@ public class PostController {
         this.service = new PostService();
     }*/
 
+    // GET
+    // {url}/post?all 로 호출
     @GetMapping
     public List<PostRegisterResult> all(){
         return service.findAll();
     }
 
+    // POST
+    // {url}/post?register 로 호출, 값은 json 으로 보낸다.
     @PostMapping
     public PostRegisterResult register(final @RequestBody PostRegisterCommand command){
         return service.register(command);
